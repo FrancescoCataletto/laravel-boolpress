@@ -17162,7 +17162,24 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  mode: 'history'
+  mode: 'history',
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: HomeComponent
+  }, {
+    path: '/chi-siamo',
+    name: 'about',
+    component: AboutComponent
+  }, {
+    path: '/blog',
+    name: 'blog',
+    component: BlogComponent
+  }, {
+    path: '/contatti',
+    name: 'contacts',
+    component: ContactsComponent
+  }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

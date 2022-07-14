@@ -1919,23 +1919,10 @@ __webpack_require__.r(__webpack_exports__);
     FooterComponent: _components_partials_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {
-      postApi: 'http://127.0.0.1:8000/api/index',
-      posts: null
-    };
+    return {};
   },
-  methods: {
-    getApi: function getApi() {
-      var _this = this;
-
-      axios.get(this.postApi).then(function (res) {
-        _this.posts = res.data.data;
-      });
-    }
-  },
-  mounted: function mounted() {
-    this.getApi();
-  }
+  methods: {},
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -2045,11 +2032,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("HeaderComponent"), _vm._v(" "), _c("div", [_c("ul", _vm._l(_vm.posts, function (post) {
-    return _c("li", {
-      key: post.id
-    }, [_c("h3", [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.text))])]);
-  }), 0)]), _vm._v(" "), _c("FooterComponent")], 1);
+  return _c("div", [_c("HeaderComponent"), _vm._v(" "), _c("main"), _vm._v(" "), _c("FooterComponent")], 1);
 };
 
 var staticRenderFns = [];

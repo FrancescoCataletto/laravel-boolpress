@@ -12,11 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('guest.home');
-})->name('home');
-
 Auth::routes();
 
 Route::middleware('auth')
@@ -27,3 +22,7 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index')->name('admin');
         Route::resource('posts', 'PostController');
 });
+
+Route::get('{any?}', function(){
+    return view('guest.home');
+})->where('any', '.*')->name('home');

@@ -18265,7 +18265,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_HomeComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/HomeComponent */ "./resources/js/components/pages/HomeComponent.vue");
 /* harmony import */ var _components_pages_AboutComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/AboutComponent */ "./resources/js/components/pages/AboutComponent.vue");
-/* harmony import */ var _components_pages_BlogComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/pages/BlogComponent */ "./resources/js/components/pages/BlogComponent.vue");
+/* harmony import */ var _components_pages_BlogComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/BlogComponent */ "./resources/js/components/pages/BlogComponent.vue");
 /* harmony import */ var _components_pages_ContactsComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/pages/ContactsComponent */ "./resources/js/components/pages/ContactsComponent.vue");
 
 
@@ -18276,6 +18276,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
+  // oppure linkExactActiveClass: 'active'
   routes: [{
     path: '/',
     name: 'home',
@@ -18287,7 +18288,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }, {
     path: '/blog',
     name: 'blog',
-    component: _components_pages_BlogComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _components_pages_BlogComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/contatti',
     name: 'contacts',

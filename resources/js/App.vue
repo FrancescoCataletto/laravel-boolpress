@@ -2,7 +2,9 @@
     <div>
         <HeaderComponent/>
 
-        <main></main>
+        <main>
+            <router-view></router-view>
+        </main>
 
         <FooterComponent/>
 

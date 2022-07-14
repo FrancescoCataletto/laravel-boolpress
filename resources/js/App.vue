@@ -1,17 +1,32 @@
 <template>
-  <div>
-    <ul>
-        <li v-for="post in posts" :key="post.id">
-            <h3>{{post.title}}</h3>
-            <p>{{post.text}}</p>
-        </li>
-    </ul>
-  </div>
+    <div>
+        <HeaderComponent/>
+
+        <div>
+            <ul>
+                <li v-for="post in posts" :key="post.id">
+                    <h3>{{post.title}}</h3>
+                    <p>{{post.text}}</p>
+                </li>
+            </ul>
+        </div>
+
+        <FooterComponent/>
+        
+    </div>
 </template>
 
 <script>
+
+import HeaderComponent from './components/partials/HeaderComponent.vue';
+import FooterComponent from './components/partials/FooterComponent.vue';
+
 export default {
     name: 'App',
+    components:{
+        HeaderComponent,
+        FooterComponent
+    },
 
     data(){
         return {

@@ -26,5 +26,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+li{
+    a{
+        text-decoration: none;
+        &.router-link-exact-active{
+            color:forestgreen;
+            font-size: 20px;
+        } 
+    }
+   
+}
 </style>

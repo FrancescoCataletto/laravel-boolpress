@@ -2,10 +2,18 @@
   <header>
     <nav>
         <ul>
-            <li>HOME</li>
-            <li>CHI SIAMO</li>
-            <li>BLOG</li>
-            <li>CONTATTI</li>
+            <li>
+                <router-link :to="{name: 'home'}">HOME</router-link>
+            </li>
+            <li>
+                <router-link :to="{name: 'about'}">CHI SIAMO</router-link>
+            </li>
+            <li>
+                <router-link :to="{name: 'blog'}">BLOG</router-link>
+            </li>
+            <li>
+                <router-link :to="{name: 'contacts'}">CONTATTI</router-link>
+            </li>
         </ul>
     </nav>
   </header>

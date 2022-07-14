@@ -1952,7 +1952,26 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Blog'
+  name: 'Blog',
+  data: function data() {
+    return {
+      urlApi: '/api/index',
+      posts: null
+    };
+  },
+  methods: {
+    getApi: function getApi() {
+      var _this = this;
+
+      axios.get(this.urlApi).then(function (res) {
+        _this.posts = res.data.data;
+        console.log(_this.posts);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getApi();
+  }
 });
 
 /***/ }),
@@ -2084,7 +2103,11 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "container"
-  }, [_vm._v("BLOG")]);
+  }, _vm._l(_vm.posts, function (post) {
+    return _c("div", {
+      key: post.id
+    }, [_c("h3", [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.text))])]);
+  }), 0);
 };
 
 var staticRenderFns = [];

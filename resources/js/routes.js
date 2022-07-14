@@ -3,6 +3,11 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+import HomeComponent from './components/pages/HomeComponent';
+import AboutComponent from './components/pages/AboutComponent';
+import BlogComponent from './components/pages/BlogComponent';
+import ContactsComponent from './components/pages/ContactsComponent';
+
 const router = new VueRouter({
     mode: 'history',
     routes:[

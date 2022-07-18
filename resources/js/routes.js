@@ -7,6 +7,7 @@ import HomeComponent from './components/pages/HomeComponent';
 import AboutComponent from './components/pages/AboutComponent';
 import BlogComponent from './components/pages/BlogComponent';
 import ContactsComponent from './components/pages/ContactsComponent';
+import PostComponent from './components/pages/PostComponent';
 
 const router = new VueRouter({
     mode: 'history',
@@ -31,6 +32,11 @@ const router = new VueRouter({
             path: '/contatti',
             name: 'contacts',
             component: ContactsComponent
+        },
+        {
+            path: '/post/:slug',
+            name: 'post',
+            component: PostComponent
         }
     ]
 });

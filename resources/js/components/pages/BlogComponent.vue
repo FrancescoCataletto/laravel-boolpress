@@ -4,6 +4,9 @@
            :key="post.id">
         <h3>{{post.title}}</h3>
         <p>{{post.text}}</p>
+        <p>
+          <router-link :to="{name: 'post', params:{slug: post.slug}}">SHOW MORE</router-link>
+        </p>
       </div>
 
   <div class="btn-box">

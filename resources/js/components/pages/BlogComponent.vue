@@ -5,6 +5,19 @@
         <h3>{{post.title}}</h3>
         <p>{{post.text}}</p>
       </div>
+
+  <div class="btn-box">
+
+    <button @click="getApi(pagination.current -1)"
+    :disabled="pagination.current === 1"
+    >INDIETRO</button>
+
+    <button @click="getApi(pagination.current +1)"
+    :disabled="pagination.current === pagination.last"
+    >AVANTI</button>
+
+  </div>
+      
   </div>
 </template>
 
@@ -14,22 +27,30 @@ export default {
     data(){
       return{
         urlApi: '/api/index',
-        posts: null
+        posts: null,
+        pagination:{
+          current: null,
+          last: null
+        }
       }
     },
 
     methods:{
-      getApi(){
-        axios.get(this.urlApi)
+      getApi(page){
+        this.pages
+        axios.get(this.urlApi + "?page=" + page)
         .then(res => {
-          this.posts= res.data.data
-          console.log(this.posts)
+          this.posts= res.data.data;
+          this.pagination = {
+            current: res.data.current_page,
+            last: res.data.last_page
+          }
         })
       }
     },
 
     mounted(){
-      this.getApi();
+      this.getApi(1);
     }
 }
 </script>

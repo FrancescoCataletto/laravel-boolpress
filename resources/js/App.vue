@@ -40,5 +40,8 @@ export default {
 </script>
 
 <style>
-
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
 </style>
